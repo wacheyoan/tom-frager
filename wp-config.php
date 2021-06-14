@@ -30,7 +30,7 @@ if ( $is_localhost ):
 
     define( 'WP_DEBUG', true );
 else:
-    define('DB_NAME', 'bxqvbomzwalqrsq7qnlrs');
+    define('DB_NAME', 'bxqvbomzwalqrsq7qnlr');
     define('DB_USER', 'uq1b6c7jysvalbou');
     define('DB_PASSWORD', 'IlVY841c2ekIJROoVbN5');
     define('DB_HOST', 'bxqvbomzwalqrsq7qnlr-mysql.services.clever-cloud.com');
