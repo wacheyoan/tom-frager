@@ -20,18 +20,23 @@
  * @package WordPress
  */
 
-// ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
-/** Nom de la base de données de WordPress. */
-define( 'DB_NAME', 'votre_nom_de_bdd' );
+$is_localhost = ($_SERVER['REMOTE_ADDR'] == "127.0.0.1" or $_SERVER['REMOTE_ADDR'] == "::1" or $_SERVER['REMOTE_ADDR'] == "localhost");
 
-/** Utilisateur de la base de données MySQL. */
-define( 'DB_USER', 'votre_utilisateur_de_bdd' );
+if ( $is_localhost ):
+    define('DB_NAME', 'tomfrager');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', '');
+    define('DB_HOST', 'localhost');
 
-/** Mot de passe de la base de données MySQL. */
-define( 'DB_PASSWORD', 'votre_mdp_de_bdd' );
+    define( 'WP_DEBUG', true );
+else:
+    define('DB_NAME', 'bxqvbomzwalqrsq7qnlrs');
+    define('DB_USER', 'uq1b6c7jysvalbou');
+    define('DB_PASSWORD', 'IlVY841c2ekIJROoVbN5');
+    define('DB_HOST', 'bxqvbomzwalqrsq7qnlr-mysql.services.clever-cloud.com');
 
-/** Adresse de l’hébergement MySQL. */
-define( 'DB_HOST', 'localhost' );
+    define( 'WP_DEBUG', false );
+endif;
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -86,7 +91,6 @@ $table_prefix = 'wp_';
  *
  * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
 
 /* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
 
