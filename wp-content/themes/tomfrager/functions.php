@@ -179,30 +179,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
-################# NAV AJAX #######################
-
-add_filter('post_link', 'ajaxed_links');
-add_filter('category_link', 'ajaxed_links');
-add_filter('page_link', 'ajaxed_links');
-
-function ajaxed_links($fullLink){
-    $ndd = get_bloginfo('url');
-    $ancre = str_replace($ndd,'',$fullLink);
-    return $ndd.'/#!'.$ancre;
-}
-
-function remove_more_jump_link($link) {
-    $offset = strpos($link, '#more-');
-    if ($offset) {
-        $end = strpos($link, '"',$offset);
-    }
-    if ($end) {
-        $link = substr_replace($link, '', $offset, $end-$offset);
-    }
-    return $link;
-}
-add_filter('the_content_more_link', 'remove_more_jump_link');
-
-
-################# NAV AJAX #######################
