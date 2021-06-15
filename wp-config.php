@@ -25,7 +25,7 @@ $is_localhost = ($_SERVER['REMOTE_ADDR'] == "127.0.0.1" or $_SERVER['REMOTE_ADDR
 if ( $is_localhost ):
     define('DB_NAME', 'tomfrager');
     define('DB_USER', 'root');
-    define('DB_PASSWORD', '');
+    define('DB_PASSWORD', 'root');
     define('DB_HOST', 'localhost');
 
     define( 'WP_DEBUG', true );

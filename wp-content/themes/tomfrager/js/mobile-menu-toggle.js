@@ -11,7 +11,7 @@ function toggle() {
         //submenu
         jQuery('.sub-menu').hide();
 
-        jQuery('.menu-toolbar-container').on('click',function() {
+        jQuery('.menu-toolbar').on('click',function() {
             if (jQuery('.sub-menu').is(":hidden") && !jQuery('.sub-menu').hasClass('hide-sub-menu')) {
                 if (!jQuery(".fa-times").length){
                     jQuery('.sub-menu').append("<i class='fas fa-times close-sub-menu'></i>");

@@ -87,23 +87,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 29, sass/style.scss */
-.menu-toolbar-container {
+.menu-toolbar {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-/* line 34, sass/style.scss */
-.menu-toolbar-container .mobile-menu {
   display: flex;
   justify-content: space-between;
 }
 /* line 38, sass/style.scss */
-.menu-toolbar-container .mobile-menu li a {
+.menu-toolbar li a {
   text-decoration: none;
   color: black;
 }
 /* line 44, sass/style.scss */
-.menu-toolbar-container .sub-menu {
+.menu-toolbar .sub-menu {
   position: fixed;
   width: 100%;
   left: 0;
@@ -114,13 +111,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 0;
 }
 /* line 55, sass/style.scss */
-.menu-toolbar-container .sub-menu-animate {
+.menu-toolbar .sub-menu-animate {
   animation-fill-mode: forwards;
   animation-duration: 1.5s;
   animation-name: sub-menu;
 }
 
-.menu-toolbar-container .sub-menu-animate .close-sub-menu {
+.menu-toolbar .sub-menu-animate .close-sub-menu {
   position: absolute;
   top: 61px;
   right: 10%;

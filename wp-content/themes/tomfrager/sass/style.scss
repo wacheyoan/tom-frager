@@ -26,21 +26,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "compass/reset";
 
 //style menu mobile
-.menu-toolbar-container {
+.menu-toolbar {
   position: absolute;
   bottom :0;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-  .mobile-menu {
-    display: flex;
-    justify-content: space-between;
-    li {
-      a {
-        text-decoration: none;
-        color : black;
-      }
+  li {
+    a {
+      text-decoration: none;
+      color : black;
     }
   }
+
   .sub-menu {
     position: fixed;
     width: 100%;

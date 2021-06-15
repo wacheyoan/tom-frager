@@ -15,8 +15,8 @@ wp_nav_menu( array(
 'depth' => 6,
 'sort_column' => 'menu_order',
 'container' => 'div',
-'menu_id' => 'main-nav',
-'menu_class' => 'nav mobile-menu',
+'menu_id' => 'main-toolbar',
+'menu_class' => 'menu-toolbar',
 'theme_location' => 'mobile-menu'
 ) );
 } else {
