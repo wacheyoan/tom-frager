@@ -180,3 +180,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// register a mobile menu
+function wdm_register_mobile_menu() {
+    add_theme_support( 'nav-menus' );
+    register_nav_menus( array('mobile-menu' => __( 'Mobile Menu', 'wdm' )) );
+}
+add_action( 'init', 'wdm_register_mobile_menu' );
