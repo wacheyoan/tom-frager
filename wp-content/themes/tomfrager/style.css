@@ -155,24 +155,7 @@ body * {
 }
 
 /* line 97, sass/style.scss */
-.brand-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-/* line 102, sass/style.scss */
-.brand-container .paragraph {
-  padding: 15px;
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 140%;
-  text-align: justify;
-}
-/* line 111, sass/style.scss */
-.brand-container h2.title {
+h2.title {
   position: relative;
   text-align: center;
   font-size: 48px;
@@ -182,7 +165,35 @@ body * {
   line-height: 140%;
   z-index: 2;
 }
-/* line 121, sass/style.scss */
+
+/* line 108, sass/style.scss */
+h3.subtitle {
+  text-align: right;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+}
+
+/* line 118, sass/style.scss */
+.brand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* line 123, sass/style.scss */
+.brand-container .paragraph {
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: justify;
+}
+/* line 133, sass/style.scss */
 .brand-container .slash {
   position: absolute;
   left: 50%;
@@ -192,7 +203,7 @@ body * {
 }
 
 @media screen and (min-width: 800px) {
-  /* line 133, sass/style.scss */
+  /* line 144, sass/style.scss */
   .logos-container {
     height: 342px;
   }
