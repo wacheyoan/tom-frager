@@ -199,7 +199,7 @@ function remove_more_jump_link($link) {
         $end = strpos($link, '"',$offset);
     }
     if ($end) {
-        $link = substr_replace($link, '', $offset, $end-$offset);
+        $link = surbstr_replace($link, '', $offset, $end-$offset);
     }
     return $link;
 }

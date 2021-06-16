@@ -87,23 +87,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 29, sass/style.scss */
-.menu-toolbar-container {
+.menu-toolbar {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-/* line 34, sass/style.scss */
-.menu-toolbar-container .mobile-menu {
   display: flex;
   justify-content: space-between;
 }
-/* line 38, sass/style.scss */
-.menu-toolbar-container .mobile-menu li a {
+/* line 37, sass/style.scss */
+.menu-toolbar li a {
   text-decoration: none;
   color: black;
 }
-/* line 44, sass/style.scss */
-.menu-toolbar-container .sub-menu {
+/* line 43, sass/style.scss */
+.menu-toolbar .sub-menu {
   position: fixed;
   width: 100%;
   left: 0;
@@ -113,14 +110,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-left: 5%;
   top: 0;
 }
-/* line 55, sass/style.scss */
-.menu-toolbar-container .sub-menu-animate {
+/* line 54, sass/style.scss */
+.menu-toolbar .sub-menu-animate {
   animation-fill-mode: forwards;
   animation-duration: 1.5s;
   animation-name: sub-menu;
 }
-/* line 60, sass/style.scss */
-.menu-toolbar-container .sub-menu-animate .close-sub-menu {
+/* line 59, sass/style.scss */
+.menu-toolbar .sub-menu-animate .close-sub-menu {
   position: absolute;
   top: 61px;
   right: 10%;
@@ -133,20 +130,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: translateY(0%);
   }
 }
-/* line 77, sass/style.scss */
+/* line 76, sass/style.scss */
 .logos-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 102px;
 }
-/* line 82, sass/style.scss */
+/* line 81, sass/style.scss */
 .logos-container img {
   height: 33%;
 }
 
 @media screen and (min-width: 800px) {
-  /* line 89, sass/style.scss */
+  /* line 88, sass/style.scss */
   .logos-container {
     height: 342px;
   }
