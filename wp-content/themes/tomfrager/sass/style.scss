@@ -95,7 +95,6 @@ body *{
 }
 
 .brand-container{
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,12 +109,20 @@ body *{
     text-align: justify;
   }
   h2.title{
+    position: relative;
     text-align: center;
     font-size: 48px;
     font-family: 'Amatic SC', cursive;
     font-style: normal;
     font-weight: bold;
     line-height: 140%;
+    z-index: 2;
+  }
+  .slash{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
   }
   .slash{
     position: absolute;
@@ -124,7 +131,6 @@ body *{
     z-index: -1;
   }
 }
-
 
 @media screen and (min-width:800px) {
   .logos-container{
