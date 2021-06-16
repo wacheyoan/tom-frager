@@ -123,11 +123,14 @@ body *{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+  }
+  .slash{
+    position: absolute;
+    top: 0;
+    transform: translateY(75%);
     z-index: -1;
   }
 }
-
-
 
 @media screen and (min-width:800px) {
   .logos-container{

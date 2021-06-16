@@ -186,3 +186,4 @@ function wdm_register_mobile_menu() {
     register_nav_menus( array('mobile-menu' => __( 'Mobile Menu', 'wdm' )) );
 }
 add_action( 'init', 'wdm_register_mobile_menu' );
+
