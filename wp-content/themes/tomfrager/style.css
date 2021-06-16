@@ -156,13 +156,12 @@ body * {
 
 /* line 97, sass/style.scss */
 .brand-container {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-/* line 103, sass/style.scss */
+/* line 102, sass/style.scss */
 .brand-container .paragraph {
   padding: 15px;
   font-family: 'Raleway', sans-serif;
@@ -172,25 +171,28 @@ body * {
   line-height: 140%;
   text-align: justify;
 }
-/* line 112, sass/style.scss */
+/* line 111, sass/style.scss */
 .brand-container h2.title {
+  position: relative;
   text-align: center;
   font-size: 48px;
   font-family: 'Amatic SC', cursive;
   font-style: normal;
   font-weight: bold;
   line-height: 140%;
+  z-index: 2;
 }
-/* line 120, sass/style.scss */
+/* line 121, sass/style.scss */
 .brand-container .slash {
   position: absolute;
-  top: 0;
-  transform: translateY(75%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
 @media screen and (min-width: 800px) {
-  /* line 130, sass/style.scss */
+  /* line 133, sass/style.scss */
   .logos-container {
     height: 342px;
   }

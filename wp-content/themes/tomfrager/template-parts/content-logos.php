@@ -3,7 +3,7 @@
         <div class="logos-container">
             <?php
             while ( have_rows('logos') ) : the_row(); ?>
-                <img src="<?= get_sub_field('images') ?>">
+                <img src="<?= get_sub_field('images') ?>" alt="">
             <?php
             endwhile;?>
         </div>

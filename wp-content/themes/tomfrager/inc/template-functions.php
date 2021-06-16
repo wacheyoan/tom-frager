@@ -35,3 +35,38 @@ function tomfrager_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'tomfrager_pingback_header' );
+
+add_action('acf/init', 'logos');
+function logos() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'logos',
+            'title'             => __('Logos'),
+            'description'       => __('Créer les logos'),
+            'render_template'   => 'template-parts/content-logos.php',
+            'enqueue_style'     => get_template_directory_uri().'/style.css',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'logos', 'logo' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'quote',
+            'title'             => __('Quote'),
+            'description'       => __('Créer une citation'),
+            'render_template'   => 'template-parts/content-brand.php',
+            'enqueue_style'     => get_template_directory_uri().'/style.css',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'quotes', 'quote' ),
+        ));
+    }
+
+}
+
+
+
