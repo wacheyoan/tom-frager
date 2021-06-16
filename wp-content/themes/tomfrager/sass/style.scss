@@ -24,6 +24,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "compass";
 @import "compass/reset";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap');
+
+
+:root{
+  --black: #242424;
+}
+
+body *{
+  color: var(--black);
+}
 
 //style menu mobile
 .menu-toolbar {
@@ -81,6 +92,37 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   img{
     height: 33%;
  }
+}
+
+.brand-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .paragraph{
+    padding: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: justify;
+  }
+  h2.title{
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Amatic SC', cursive;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 140%;
+  }
+  .slash{
+    position: absolute;
+    top: 0;
+    transform: translateY(75%);
+    z-index: -1;
+  }
 }
 
 
