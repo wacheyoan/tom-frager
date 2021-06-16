@@ -23,51 +23,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
-/* line 29, sass/style.scss */
+/* line 29, ../sass/style.scss */
 :root {
   --black: #242424;
 }
 
-/* line 33, sass/style.scss */
-body {
-  margin: 0;
-}
-/* line 35, sass/style.scss */
+/* line 33, ../sass/style.scss */
 body * {
   color: var(--black);
 }
-/* line 39, sass/style.scss */
-body p {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-}
-/* line 46, sass/style.scss */
-body .menu-toolbar {
-  position: fixed;
+
+/* line 38, ../sass/style.scss */
+.menu-toolbar {
+  position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  margin: 0;
-  background: white;
-  box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
-  border-radius: 20px 20px 0 0;
 }
-/* line 59, sass/style.scss */
-body .menu-toolbar li {
-  list-style: none;
-  width: 33%;
-}
-/* line 62, sass/style.scss */
-body .menu-toolbar li a {
+/* line 46, ../sass/style.scss */
+.menu-toolbar li a {
   text-decoration: none;
   color: black;
 }
-/* line 68, sass/style.scss */
-body .menu-toolbar .sub-menu {
+/* line 52, ../sass/style.scss */
+.menu-toolbar .sub-menu {
   position: fixed;
   width: 100%;
   left: 0;
@@ -77,14 +57,14 @@ body .menu-toolbar .sub-menu {
   padding-left: 5%;
   top: 0;
 }
-/* line 79, sass/style.scss */
-body .menu-toolbar .sub-menu-animate {
+/* line 63, ../sass/style.scss */
+.menu-toolbar .sub-menu-animate {
   animation-fill-mode: forwards;
   animation-duration: 1.5s;
   animation-name: sub-menu;
 }
-/* line 84, sass/style.scss */
-body .menu-toolbar .sub-menu-animate .close-sub-menu {
+/* line 68, ../sass/style.scss */
+.menu-toolbar .sub-menu-animate .close-sub-menu {
   position: absolute;
   top: 61px;
   right: 10%;
@@ -97,26 +77,27 @@ body .menu-toolbar .sub-menu-animate .close-sub-menu {
     transform: translateY(0%);
   }
 }
-/* line 101, sass/style.scss */
-body .logos-container {
+/* line 85, ../sass/style.scss */
+.logos-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 102px;
 }
-/* line 106, sass/style.scss */
-body .logos-container img {
+/* line 90, ../sass/style.scss */
+.logos-container img {
   height: 33%;
 }
-/* line 111, sass/style.scss */
-body .brand-container {
+
+/* line 95, ../sass/style.scss */
+.brand-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-/* line 116, sass/style.scss */
-body .brand-container .paragraph {
+/* line 100, ../sass/style.scss */
+.brand-container .paragraph {
   padding: 15px;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -125,8 +106,8 @@ body .brand-container .paragraph {
   line-height: 140%;
   text-align: justify;
 }
-/* line 125, sass/style.scss */
-body .brand-container h2.title {
+/* line 109, ../sass/style.scss */
+.brand-container h2.title {
   position: relative;
   text-align: center;
   font-size: 48px;
@@ -136,68 +117,34 @@ body .brand-container h2.title {
   line-height: 140%;
   z-index: 2;
 }
-/* line 135, sass/style.scss */
-body .brand-container .slash {
+/* line 119, ../sass/style.scss */
+.brand-container .slash {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 141, sass/style.scss */
-body .brand-container .slash {
+/* line 125, ../sass/style.scss */
+.brand-container .slash {
   position: absolute;
   top: 0;
   transform: translateY(75%);
   z-index: -1;
 }
-/* line 151, sass/style.scss */
-body .menu-trousse a .item-menu {
-  margin-top: -25%;
-}
-/* line 153, sass/style.scss */
-body .menu-trousse a .item-menu img {
-  background: white;
-  border-radius: 50%;
-  padding: 15px 15px 0 15px;
-  box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
-}
-/* line 163, sass/style.scss */
-body .item-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* line 168, sass/style.scss */
-body .item-menu img {
-  width: 30px;
-  height: 30px;
-}
+
 @media screen and (min-width: 800px) {
-  /* line 175, sass/style.scss */
-  body .logos-container {
+  /* line 134, ../sass/style.scss */
+  .logos-container {
     height: 342px;
   }
 }
 @media (max-width: 782px) {
-  /* line 181, sass/style.scss */
-  body .menu-toggle {
+  /* line 140, ../sass/style.scss */
+  .menu-toggle {
     display: none !important;
   }
 }
-/* line 188, sass/style.scss */
-body .nav-menu {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  width: 90%;
-  align-items: center;
-  margin: 2% auto;
-}
-/* line 195, sass/style.scss */
-body .nav-menu li {
-  list-style: none;
-}
-/* line 197, sass/style.scss */
-body .nav-menu li a {
-  text-decoration: none;
+/* line 145, ../sass/style.scss */
+body {
+  background: blue;
 }

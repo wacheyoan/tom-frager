@@ -21,51 +21,38 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap');
-
-
-:root{
-  --black: #242424;
-}
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+:root {
+  --black: #242424; }
 
 body {
-  margin :0;
-  * {
-    color: var(--black);
-  }
-
-  p {
+  margin: 0; }
+  body * {
+    color: var(--black); }
+  body p {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: 12px;
-  }
-
-  //style menu mobile
-  .menu-toolbar {
+    font-size: 12px; }
+  body .menu-toolbar {
     position: fixed;
-    bottom :0;
-    left : 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    margin : 0;
+    margin: 0;
     background: white;
     box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
-    border-radius: 20px 20px 0 0;
-
-    li {
+    border-radius: 20px 20px 0 0; }
+    body .menu-toolbar li {
       list-style: none;
-      width: 33%;
-      a {
+      width: 33%; }
+      body .menu-toolbar li a {
         text-decoration: none;
-        color : black;
-      }
-    }
-
-    .sub-menu {
+        color: black; }
+    body .menu-toolbar .sub-menu {
       position: fixed;
       width: 100%;
       left: 0;
@@ -73,56 +60,41 @@ body {
       height: 100vh;
       padding-top: 15%;
       padding-left: 5%;
-      top :0;
-    }
-
-    .sub-menu-animate {
+      top: 0; }
+    body .menu-toolbar .sub-menu-animate {
       animation-fill-mode: forwards;
       animation-duration: 1.5s;
-      animation-name: sub-menu;
-
-      .close-sub-menu {
+      animation-name: sub-menu; }
+      body .menu-toolbar .sub-menu-animate .close-sub-menu {
         position: absolute;
         top: 61px;
-        right: 10%;
-      }
-    }
-
-    @keyframes sub-menu {
-      from {
-        transform: translateY(100%);
-      }
-      to {
-        transform: translateY(0%);
-      }
-    }
-  }
-
-  .logos-container{
+        right: 10%; }
+@keyframes sub-menu {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(0%); } }
+  body .logos-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 102px;
-    img{
-      height: 33%;
-    }
-  }
-
-  .brand-container{
+    height: 102px; }
+    body .logos-container img {
+      height: 33%; }
+  body .brand-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    .paragraph{
+    flex-direction: column; }
+    body .brand-container .paragraph {
       padding: 15px;
       font-family: 'Raleway', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
       line-height: 140%;
-      text-align: justify;
-    }
-    h2.title{
+      text-align: justify; }
+    body .brand-container h2.title {
       position: relative;
       text-align: center;
       font-size: 48px;
@@ -130,73 +102,47 @@ body {
       font-style: normal;
       font-weight: bold;
       line-height: 140%;
-      z-index: 2;
-    }
-    .slash{
+      z-index: 2; }
+    body .brand-container .slash {
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%,-50%);
-    }
-    .slash{
+      transform: translate(-50%, -50%); }
+    body .brand-container .slash {
       position: absolute;
       top: 0;
       transform: translateY(75%);
-      z-index: -1;
-    }
-  }
-
-  .menu-trousse {
-    a {
-      .item-menu {
-        margin-top: -25%;
-        img {
-          background: white;
-          border-radius: 50%;
-          padding: 15px 15px 0 15px;
-          box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
-        }
-      }
-    }
-  }
-
-  .item-menu {
-    display : flex;
-    flex-direction : column;
-    align-items: center;
-
-    img {
+      z-index: -1; }
+  body .menu-trousse a .item-menu {
+    margin-top: -25%; }
+    body .menu-trousse a .item-menu img {
+      background: white;
+      border-radius: 50%;
+      padding: 15px 15px 0 15px;
+      box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25); }
+  body .item-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body .item-menu img {
       width: 30px;
-      height : 30px;
-    }
-  }
-
-  @media screen and (min-width:800px) {
-    .logos-container{
-      height: 342px;
-    }
-  }
-
+      height: 30px; }
+  @media screen and (min-width: 800px) {
+    body .logos-container {
+      height: 342px; } }
   @media (max-width: 782px) {
-    .menu-toggle {
-      display: none !important;
-    }
-  }
-
-  //menu top
-
-  .nav-menu {
+    body .menu-toggle {
+      display: none !important; } }
+  body .nav-menu {
     display: flex;
     justify-content: space-between;
     padding: 0;
     width: 90%;
     align-items: center;
-    margin: 2% auto;
-    li {
-      list-style: none;
-      a {
-        text-decoration: none;
-      }
-    }
-  }
-}
+    margin: 2% auto; }
+    body .nav-menu li {
+      list-style: none; }
+      body .nav-menu li a {
+        text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
