@@ -21,6 +21,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
 /* line 5, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -86,7 +88,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 29, sass/style.scss */
+/* line 31, sass/style.scss */
+:root {
+  --black: #242424;
+}
+
+/* line 35, sass/style.scss */
+body * {
+  color: var(--black);
+}
+
+/* line 40, sass/style.scss */
 .menu-toolbar {
   position: absolute;
   bottom: 0;
@@ -94,12 +106,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: flex;
   justify-content: space-between;
 }
-/* line 37, sass/style.scss */
+/* line 48, sass/style.scss */
 .menu-toolbar li a {
   text-decoration: none;
   color: black;
 }
-/* line 43, sass/style.scss */
+/* line 54, sass/style.scss */
 .menu-toolbar .sub-menu {
   position: fixed;
   width: 100%;
@@ -110,13 +122,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-left: 5%;
   top: 0;
 }
-/* line 54, sass/style.scss */
+/* line 65, sass/style.scss */
 .menu-toolbar .sub-menu-animate {
   animation-fill-mode: forwards;
   animation-duration: 1.5s;
   animation-name: sub-menu;
 }
-/* line 59, sass/style.scss */
+/* line 70, sass/style.scss */
 .menu-toolbar .sub-menu-animate .close-sub-menu {
   position: absolute;
   top: 61px;
@@ -130,20 +142,55 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     transform: translateY(0%);
   }
 }
-/* line 76, sass/style.scss */
+/* line 87, sass/style.scss */
 .logos-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 102px;
 }
-/* line 81, sass/style.scss */
+/* line 92, sass/style.scss */
 .logos-container img {
   height: 33%;
 }
 
+/* line 97, sass/style.scss */
+.brand-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* line 103, sass/style.scss */
+.brand-container .paragraph {
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: justify;
+}
+/* line 112, sass/style.scss */
+.brand-container h2.title {
+  text-align: center;
+  font-size: 48px;
+  font-family: 'Amatic SC', cursive;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 140%;
+}
+/* line 120, sass/style.scss */
+.brand-container .slash {
+  position: absolute;
+  top: 0;
+  transform: translateY(75%);
+  z-index: -1;
+}
+
 @media screen and (min-width: 800px) {
-  /* line 88, sass/style.scss */
+  /* line 130, sass/style.scss */
   .logos-container {
     height: 342px;
   }
