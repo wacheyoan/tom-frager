@@ -126,7 +126,48 @@ body .brand-container .paragraph {
   text-align: justify;
 }
 /* line 125, sass/style.scss */
-body .brand-container h2.title {
+body .brand-container .slash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 135, sass/style.scss */
+body .menu-trousse a .item-menu {
+  margin-top: -25%;
+}
+/* line 137, sass/style.scss */
+body .menu-trousse a .item-menu img {
+  background: white;
+  border-radius: 50%;
+  padding: 15px 15px 0 15px;
+  box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
+}
+/* line 147, sass/style.scss */
+body .item-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 151, sass/style.scss */
+body .item-menu img {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (min-width: 800px) {
+  /* line 158, sass/style.scss */
+  body .logos-container {
+    height: 342px;
+  }
+}
+@media (max-width: 782px) {
+  /* line 164, sass/style.scss */
+  body .menu-toggle {
+    display: none !important;
+  }
+}
+/* line 168, sass/style.scss */
+body h2.title {
   position: relative;
   text-align: center;
   font-size: 48px;
@@ -136,55 +177,41 @@ body .brand-container h2.title {
   line-height: 140%;
   z-index: 2;
 }
-/* line 135, sass/style.scss */
+/* line 179, sass/style.scss */
+body h3.subtitle {
+  text-align: right;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+}
+/* line 189, sass/style.scss */
+body .brand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* line 194, sass/style.scss */
+body .brand-container .paragraph {
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: justify;
+}
+/* line 204, sass/style.scss */
 body .brand-container .slash {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-/* line 141, sass/style.scss */
-body .brand-container .slash {
-  position: absolute;
-  top: 0;
-  transform: translateY(75%);
   z-index: -1;
 }
-/* line 151, sass/style.scss */
-body .menu-trousse a .item-menu {
-  margin-top: -25%;
-}
-/* line 153, sass/style.scss */
-body .menu-trousse a .item-menu img {
-  background: white;
-  border-radius: 50%;
-  padding: 15px 15px 0 15px;
-  box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
-}
-/* line 163, sass/style.scss */
-body .item-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* line 168, sass/style.scss */
-body .item-menu img {
-  width: 30px;
-  height: 30px;
-}
-@media screen and (min-width: 800px) {
-  /* line 175, sass/style.scss */
-  body .logos-container {
-    height: 342px;
-  }
-}
-@media (max-width: 782px) {
-  /* line 181, sass/style.scss */
-  body .menu-toggle {
-    display: none !important;
-  }
-}
-/* line 188, sass/style.scss */
+/* line 213, sass/style.scss */
 body .nav-menu {
   display: flex;
   justify-content: space-between;
@@ -193,11 +220,11 @@ body .nav-menu {
   align-items: center;
   margin: 2% auto;
 }
-/* line 195, sass/style.scss */
+/* line 220, sass/style.scss */
 body .nav-menu li {
   list-style: none;
 }
-/* line 197, sass/style.scss */
+/* line 222, sass/style.scss */
 body .nav-menu li a {
   text-decoration: none;
 }

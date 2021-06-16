@@ -52,6 +52,8 @@ function logos() {
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'logos', 'logo' ),
+            'post_types' => array('page'),
+
         ));
 
         acf_register_block_type(array(
@@ -63,7 +65,23 @@ function logos() {
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'quotes', 'quote' ),
+            'post_types' => array('page'),
+
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'case',
+            'title'             => __('case'),
+            'description'       => __('Créer un exemple trousse'),
+            'render_template'   => 'template-parts/content-case.php',
+            'enqueue_style'     => get_template_directory_uri().'/style.css',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'case', 'trousse' ),
+            'post_types' => array('page'),
+
+        ));
+
     }
 
 }

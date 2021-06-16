@@ -94,25 +94,11 @@ body {
       font-size: 16px;
       line-height: 140%;
       text-align: justify; }
-    body .brand-container h2.title {
-      position: relative;
-      text-align: center;
-      font-size: 48px;
-      font-family: 'Amatic SC', cursive;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 140%;
-      z-index: 2; }
     body .brand-container .slash {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%); }
-    body .brand-container .slash {
-      position: absolute;
-      top: 0;
-      transform: translateY(75%);
-      z-index: -1; }
   body .menu-trousse a .item-menu {
     margin-top: -25%; }
     body .menu-trousse a .item-menu img {
@@ -133,6 +119,41 @@ body {
   @media (max-width: 782px) {
     body .menu-toggle {
       display: none !important; } }
+  body h2.title {
+    position: relative;
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Amatic SC', cursive;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 140%;
+    z-index: 2; }
+  body h3.subtitle {
+    text-align: right;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 140%; }
+  body .brand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    body .brand-container .paragraph {
+      padding: 15px;
+      font-family: 'Raleway', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 140%;
+      text-align: justify; }
+    body .brand-container .slash {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1; }
   body .nav-menu {
     display: flex;
     justify-content: space-between;
