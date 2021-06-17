@@ -28,6 +28,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 body {
   margin: 0; }
+  body #page {
+    margin-bottom: 100px; }
   body * {
     color: var(--black); }
   body p {
@@ -45,7 +47,8 @@ body {
     margin: 0;
     background: white;
     box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
-    border-radius: 20px 20px 0 0; }
+    border-radius: 20px 20px 0 0;
+    z-index: 10; }
     body .menu-toolbar li {
       list-style: none;
       width: 33%; }
@@ -135,12 +138,17 @@ body {
     font-weight: normal;
     font-size: 12px;
     line-height: 140%; }
-  body .brand-container {
+  body .brand-container,
+  body .description-container,
+  body .images-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; }
-    body .brand-container .paragraph {
+    flex-direction: column;
+    position: relative; }
+    body .brand-container .paragraph,
+    body .description-container .paragraph,
+    body .images-container .paragraph {
       padding: 15px;
       font-family: 'Raleway', sans-serif;
       font-style: normal;
@@ -148,7 +156,9 @@ body {
       font-size: 16px;
       line-height: 140%;
       text-align: justify; }
-    body .brand-container .slash {
+    body .brand-container .slash,
+    body .description-container .slash,
+    body .images-container .slash {
       position: absolute;
       left: 50%;
       top: 50%;
@@ -165,5 +175,53 @@ body {
       list-style: none; }
       body .nav-menu li a {
         text-decoration: none; }
+  @media screen and (min-width: 800px) {
+    body .logos-container {
+      height: 342px; } }
+  @media (max-width: 782px) {
+    body .menu-toggle {
+      display: none !important; } }
+  body .separator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    body .separator-container .image-container img {
+      margin-top: 15px; }
+  body .image-container {
+    z-index: 1; }
+    body .image-container .image {
+      position: relative; }
+      body .image-container .image img {
+        filter: brightness(0.7); }
+      body .image-container .image .img-legend {
+        left: 50%;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 34px;
+        line-height: 40px;
+        color: white;
+        text-align: center;
+        margin: 0; }
+  body .instagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px; }
+    body .instagram-container .instagram-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px; }
+      body .instagram-container .instagram-images img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */
