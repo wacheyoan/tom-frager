@@ -53,8 +53,26 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+                    'menu_class' => 'primary-menu-mobile',
 				)
 			);
 			?>
 		</nav><!-- #site-navigation -->
+        <nav>
+            <?php
+            if ( function_exists('has_nav_menu') && has_nav_menu('desktop-menu') ) {
+            wp_nav_menu( array(
+                'depth' => 6,
+                'sort_column' => 'menu_order',
+                'container' => 'div',
+                'menu_id' => 'main-desktop-menu',
+                'menu_class' => 'desktop-menu',
+                'theme_location' => 'desktop-menu'
+                )
+            );
+            } else {
+                echo "<ul class='nav desktop-menu'> <font style='color:red'>Mobile Menu has not been set</font> </ul>";
+            }
+        ?>
+        </nav>
 	</header><!-- #masthead -->

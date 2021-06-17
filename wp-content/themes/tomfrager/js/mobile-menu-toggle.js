@@ -2,12 +2,15 @@
 
 /* let's consider we want to toggle the menu displayed at 800 screen width, here's what we need to do (you can accordingly replace 800 with to a screen width you would need)..*/
 function toggle() {
-    if ( jQuery( window ).width() >= 800 ) {
-        jQuery( '.nav.mobile-menu' ).hide();
-        jQuery( '.nav.desktop-menu' ).show();
+    if ( jQuery( window ).width() >= 600 ) {
+        jQuery( '.menu-toolbar' ).hide();
+        jQuery( '.desktop-menu' ).show();
+        jQuery( '.primary-menu-mobile' ).hide();
     } else {
-        jQuery( '.nav.desktop-menu' ).hide();
-        jQuery( '.nav.mobile-menu' ).show();
+        jQuery( '.desktop-menu' ).hide();
+        jQuery( '.menu-toolbar' ).show();
+        jQuery( '.primary-menu-mobile' ).show();
+
         //submenu
         jQuery('.sub-menu').hide();
 

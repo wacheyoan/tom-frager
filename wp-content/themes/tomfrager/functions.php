@@ -187,3 +187,10 @@ function wdm_register_mobile_menu() {
 }
 add_action( 'init', 'wdm_register_mobile_menu' );
 
+// register a desktop menu
+function wdm_register_desktop_menu() {
+    add_theme_support( 'nav-menus' );
+    register_nav_menus( array('desktop-menu' => __( 'Desktop Menu', 'wdm' )) );
+}
+add_action( 'init', 'wdm_register_desktop_menu' );
+

@@ -42,6 +42,10 @@ body {
     font-size: 12px;
   }
 
+  a {
+    font-family: 'Raleway', sans-serif;
+  }
+
   //style menu mobile
   .menu-toolbar {
     position: fixed;
@@ -149,12 +153,12 @@ body {
   .menu-trousse {
     a {
       .item-menu {
-        margin-top: -25%;
+        margin-top: -30px;
         img {
           background: white;
           border-radius: 50%;
-          padding: 15px 15px 0 15px;
-          box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
+          padding: 8px 15px 0 15px;
+          box-shadow: 0 -6px 8px rgba(214, 214, 214, 0.25);
         }
       }
     }
@@ -177,13 +181,7 @@ body {
     }
   }
 
-  @media (max-width: 782px) {
-    .menu-toggle {
-      display: none !important;
-    }
-  }
-
-  //menu top
+  //menu top mobile
 
   .nav-menu {
     display: flex;
@@ -196,6 +194,80 @@ body {
       list-style: none;
       a {
         text-decoration: none;
+      }
+    }
+  }
+
+  //menu top desktop
+  .desktop-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding : 0;
+    padding-top: 1%;
+
+    .logo-horizontal {
+      width: 7%;
+      img {
+        width: 100%;
+      }
+    }
+
+    li {
+      list-style: none;
+      a{
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        display: flex;
+        font-size: 18px;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 30px;
+        }
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        white-space:nowrap;
+        margin-top: 8px;
+      }
+    }
+    .trousse-menu a {
+        flex-direction: row;
+      img {
+        width: 40px;
+      }
+      p {
+        margin : auto;
+        margin-left: 3%;
+      }
+    }
+  }
+}
+.menu-toggle {
+  display: none !important;
+}
+
+//Produits
+.products-container {
+  .all-products {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    .single-product {
+      display: flex;
+      flex-direction: column;
+      background: #FFBB92;
+      border-radius: 15px;
+      width: 293px;
+      height: 423px;
+      margin: 0 2%;
+
+      .detail-product {
+        background: white;
       }
     }
   }

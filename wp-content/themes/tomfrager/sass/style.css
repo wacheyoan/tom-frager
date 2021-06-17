@@ -34,6 +34,8 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 12px; }
+  body a {
+    font-family: 'Raleway', sans-serif; }
   body .menu-toolbar {
     position: fixed;
     bottom: 0;
@@ -114,12 +116,12 @@ body {
       transform: translateY(75%);
       z-index: -1; }
   body .menu-trousse a .item-menu {
-    margin-top: -25%; }
+    margin-top: -30px; }
     body .menu-trousse a .item-menu img {
       background: white;
       border-radius: 50%;
-      padding: 15px 15px 0 15px;
-      box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25); }
+      padding: 8px 15px 0 15px;
+      box-shadow: 0 -6px 8px rgba(214, 214, 214, 0.25); }
   body .item-menu {
     display: flex;
     flex-direction: column;
@@ -130,9 +132,6 @@ body {
   @media screen and (min-width: 800px) {
     body .logos-container {
       height: 342px; } }
-  @media (max-width: 782px) {
-    body .menu-toggle {
-      display: none !important; } }
   body .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -144,5 +143,57 @@ body {
       list-style: none; }
       body .nav-menu li a {
         text-decoration: none; }
+  body .desktop-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    padding-top: 1%; }
+    body .desktop-menu .logo-horizontal {
+      width: 7%; }
+      body .desktop-menu .logo-horizontal img {
+        width: 100%; }
+    body .desktop-menu li {
+      list-style: none; }
+      body .desktop-menu li a {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        display: flex;
+        font-size: 18px;
+        flex-direction: column;
+        align-items: center; }
+        body .desktop-menu li a img {
+          width: 30px; }
+      body .desktop-menu li p {
+        font-size: 18px;
+        font-weight: 400;
+        white-space: nowrap;
+        margin-top: 8px; }
+    body .desktop-menu .trousse-menu a {
+      flex-direction: row; }
+      body .desktop-menu .trousse-menu a img {
+        width: 40px; }
+      body .desktop-menu .trousse-menu a p {
+        margin: auto;
+        margin-left: 3%; }
+
+.menu-toggle {
+  display: none !important; }
+
+.products-container .all-products {
+  position: absolute;
+  display: flex;
+  justify-content: space-between; }
+  .products-container .all-products .single-product {
+    display: flex;
+    flex-direction: column;
+    background: #FFBB92;
+    border-radius: 15px;
+    width: 293px;
+    height: 423px;
+    margin: 0 2%; }
+    .products-container .all-products .single-product .detail-product {
+      background: white; }
 
 /*# sourceMappingURL=style.css.map */
