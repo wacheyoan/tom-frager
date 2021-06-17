@@ -49,7 +49,7 @@ function logos() {
             'description'       => __('Créer les logos'),
             'render_template'   => 'template-parts/content-logos.php',
             'enqueue_style'     => get_template_directory_uri().'/style.css',
-            'category'          => 'formatting',
+            'category'          => 'tom-frager',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'logos', 'logo' ),
             'post_types' => array('page'),
@@ -60,8 +60,7 @@ function logos() {
             'title'             => __('Quote'),
             'description'       => __('Créer une citation'),
             'render_template'   => 'template-parts/content-brand.php',
-            'enqueue_style'     => get_template_directory_uri().'/style.css',
-            'category'          => 'formatting',
+            'category'          => 'tom-frager',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'quotes', 'quote' ),
             'post_types' => array('page'),
@@ -72,10 +71,57 @@ function logos() {
             'title'             => __('case'),
             'description'       => __('Créer un exemple trousse'),
             'render_template'   => 'template-parts/content-case.php',
-            'enqueue_style'     => get_template_directory_uri().'/style.css',
-            'category'          => 'formatting',
+            'category'          => 'tom-frager',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'case', 'trousse' ),
+            'post_types' => array('page'),
+
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'description',
+            'title'             => __('description'),
+            'description'       => __('Créer une description'),
+            'render_template'   => 'template-parts/content-description.php',
+            'category'          => 'tom-frager',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'description'),
+            'post_types' => array('page'),
+
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'separateur',
+            'title'             => __('separateur'),
+            'description'       => __('Créer un séparateur'),
+            'render_template'   => 'template-parts/content-separator.php',
+            'category'          => 'tom-frager',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'séparateur'),
+            'post_types' => array('page'),
+
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'images',
+            'title'             => __('images'),
+            'description'       => __('Créer un bloc d\'images'),
+            'render_template'   => 'template-parts/content-images.php',
+            'category'          => 'tom-frager',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'images'),
+            'post_types' => array('page'),
+
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'instagram',
+            'title'             => __('instagram'),
+            'description'       => __('Cherche le feed instagram du compte'),
+            'render_template'   => 'template-parts/content-instagram.php',
+            'category'          => 'tom-frager',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'images'),
             'post_types' => array('page'),
 
         ));
@@ -83,6 +129,35 @@ function logos() {
     }
 
 }
+
+function wpc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'wpc_mime_types');
+
+function wpdocs_new_block_category( $categories ) {
+    // Plugin’s block category title and slug.
+    $block_category = array( 'title' => esc_html__( 'Tom Frager', 'text-domain' ), 'slug' => 'tom-frager' );
+    $category_slugs = wp_list_pluck( $categories, 'slug' );
+
+    if ( ! in_array( $block_category['slug'], $category_slugs, true ) ) {
+        $categories = array_merge(
+            array(
+                array(
+                    'title' => $block_category['title'],
+                    'slug'  => $block_category['slug'],
+                    'icon'  => 'palmtree',
+                ),
+            ),
+            $categories
+        );
+    }
+
+
+    return $categories;
+}
+add_filter( 'block_categories', 'wpdocs_new_block_category' );
 
 
 

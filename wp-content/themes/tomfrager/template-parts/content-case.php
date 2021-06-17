@@ -29,12 +29,23 @@
         </div>
         <?php endwhile; ?>
     </div>
-<?php endif; ?>
+<?php endif;?>
 
 
 <style>
+    h2,h3{
+        margin: 0;
+    }
+    .title-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     .case-bg{
         background-image: url("<?=$image?>");
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 100%;
         height: 174px;
         bottom: 20px;
