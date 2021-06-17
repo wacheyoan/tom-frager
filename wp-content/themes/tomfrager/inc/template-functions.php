@@ -53,7 +53,6 @@ function logos() {
             'icon'              => 'admin-comments',
             'keywords'          => array( 'logos', 'logo' ),
             'post_types' => array('page'),
-
         ));
 
         acf_register_block_type(array(
@@ -66,7 +65,6 @@ function logos() {
             'icon'              => 'admin-comments',
             'keywords'          => array( 'quotes', 'quote' ),
             'post_types' => array('page'),
-
         ));
 
         acf_register_block_type(array(
