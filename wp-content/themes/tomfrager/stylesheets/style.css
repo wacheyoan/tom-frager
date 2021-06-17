@@ -1,0 +1,150 @@
+/*!
+Theme Name: TomFrager
+Theme URI: https://underscores.me/
+Author: Automattic
+Author URI: https://automattic.com/
+Description: Hi. I'm a starter theme called <code>TomFrager</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: TomFrager
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+TomFrager is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+/* line 29, ../sass/style.scss */
+:root {
+  --black: #242424;
+}
+
+/* line 33, ../sass/style.scss */
+body * {
+  color: var(--black);
+}
+
+/* line 38, ../sass/style.scss */
+.menu-toolbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 46, ../sass/style.scss */
+.menu-toolbar li a {
+  text-decoration: none;
+  color: black;
+}
+/* line 52, ../sass/style.scss */
+.menu-toolbar .sub-menu {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  background: white;
+  height: 100vh;
+  padding-top: 15%;
+  padding-left: 5%;
+  top: 0;
+}
+/* line 63, ../sass/style.scss */
+.menu-toolbar .sub-menu-animate {
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-name: sub-menu;
+}
+/* line 68, ../sass/style.scss */
+.menu-toolbar .sub-menu-animate .close-sub-menu {
+  position: absolute;
+  top: 61px;
+  right: 10%;
+}
+@keyframes sub-menu {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+/* line 85, ../sass/style.scss */
+.logos-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 102px;
+}
+/* line 90, ../sass/style.scss */
+.logos-container img {
+  height: 33%;
+}
+
+/* line 95, ../sass/style.scss */
+.brand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* line 100, ../sass/style.scss */
+.brand-container .paragraph {
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: justify;
+}
+/* line 109, ../sass/style.scss */
+.brand-container h2.title {
+  position: relative;
+  text-align: center;
+  font-size: 48px;
+  font-family: 'Amatic SC', cursive;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 140%;
+  z-index: 2;
+}
+/* line 119, ../sass/style.scss */
+.brand-container .slash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 125, ../sass/style.scss */
+.brand-container .slash {
+  position: absolute;
+  top: 0;
+  transform: translateY(75%);
+  z-index: -1;
+}
+
+@media screen and (min-width: 800px) {
+  /* line 134, ../sass/style.scss */
+  .logos-container {
+    height: 342px;
+  }
+}
+@media (max-width: 782px) {
+  /* line 140, ../sass/style.scss */
+  .menu-toggle {
+    display: none !important;
+  }
+}
+/* line 145, ../sass/style.scss */
+body {
+  background: blue;
+}

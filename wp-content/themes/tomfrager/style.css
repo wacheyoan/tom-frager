@@ -23,96 +23,51 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
-/* line 5, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 31, sass/style.scss */
+/* line 29, sass/style.scss */
 :root {
   --black: #242424;
 }
 
+/* line 33, sass/style.scss */
+body {
+  margin: 0;
+}
 /* line 35, sass/style.scss */
 body * {
   color: var(--black);
 }
-
-/* line 40, sass/style.scss */
-.menu-toolbar {
-  position: absolute;
+/* line 39, sass/style.scss */
+body p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+/* line 46, sass/style.scss */
+body .menu-toolbar {
+  position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
+  margin: 0;
+  background: white;
+  box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
+  border-radius: 20px 20px 0 0;
 }
-/* line 48, sass/style.scss */
-.menu-toolbar li a {
+/* line 59, sass/style.scss */
+body .menu-toolbar li {
+  list-style: none;
+  width: 33%;
+}
+/* line 62, sass/style.scss */
+body .menu-toolbar li a {
   text-decoration: none;
   color: black;
 }
-/* line 54, sass/style.scss */
-.menu-toolbar .sub-menu {
+/* line 68, sass/style.scss */
+body .menu-toolbar .sub-menu {
   position: fixed;
   width: 100%;
   left: 0;
@@ -122,14 +77,14 @@ body * {
   padding-left: 5%;
   top: 0;
 }
-/* line 65, sass/style.scss */
-.menu-toolbar .sub-menu-animate {
+/* line 79, sass/style.scss */
+body .menu-toolbar .sub-menu-animate {
   animation-fill-mode: forwards;
   animation-duration: 1.5s;
   animation-name: sub-menu;
 }
-/* line 70, sass/style.scss */
-.menu-toolbar .sub-menu-animate .close-sub-menu {
+/* line 84, sass/style.scss */
+body .menu-toolbar .sub-menu-animate .close-sub-menu {
   position: absolute;
   top: 61px;
   right: 10%;
@@ -142,27 +97,26 @@ body * {
     transform: translateY(0%);
   }
 }
-/* line 87, sass/style.scss */
-.logos-container {
+/* line 101, sass/style.scss */
+body .logos-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 102px;
 }
-/* line 92, sass/style.scss */
-.logos-container img {
+/* line 106, sass/style.scss */
+body .logos-container img {
   height: 33%;
 }
-
-/* line 97, sass/style.scss */
-.brand-container {
+/* line 111, sass/style.scss */
+body .brand-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-/* line 102, sass/style.scss */
-.brand-container .paragraph {
+/* line 116, sass/style.scss */
+body .brand-container .paragraph {
   padding: 15px;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -171,8 +125,49 @@ body * {
   line-height: 140%;
   text-align: justify;
 }
-/* line 111, sass/style.scss */
-.brand-container h2.title {
+/* line 125, sass/style.scss */
+body .brand-container .slash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 135, sass/style.scss */
+body .menu-trousse a .item-menu {
+  margin-top: -25%;
+}
+/* line 137, sass/style.scss */
+body .menu-trousse a .item-menu img {
+  background: white;
+  border-radius: 50%;
+  padding: 15px 15px 0 15px;
+  box-shadow: 0px -2px 8px rgba(214, 214, 214, 0.25);
+}
+/* line 147, sass/style.scss */
+body .item-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 151, sass/style.scss */
+body .item-menu img {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (min-width: 800px) {
+  /* line 158, sass/style.scss */
+  body .logos-container {
+    height: 342px;
+  }
+}
+@media (max-width: 782px) {
+  /* line 164, sass/style.scss */
+  body .menu-toggle {
+    display: none !important;
+  }
+}
+/* line 168, sass/style.scss */
+body h2.title {
   position: relative;
   text-align: center;
   font-size: 48px;
@@ -182,18 +177,54 @@ body * {
   line-height: 140%;
   z-index: 2;
 }
-/* line 121, sass/style.scss */
-.brand-container .slash {
+/* line 179, sass/style.scss */
+body h3.subtitle {
+  text-align: right;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+}
+/* line 189, sass/style.scss */
+body .brand-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* line 194, sass/style.scss */
+body .brand-container .paragraph {
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: justify;
+}
+/* line 204, sass/style.scss */
+body .brand-container .slash {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-
-@media screen and (min-width: 800px) {
-  /* line 133, sass/style.scss */
-  .logos-container {
-    height: 342px;
-  }
+/* line 213, sass/style.scss */
+body .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 90%;
+  align-items: center;
+  margin: 2% auto;
+}
+/* line 220, sass/style.scss */
+body .nav-menu li {
+  list-style: none;
+}
+/* line 222, sass/style.scss */
+body .nav-menu li a {
+  text-decoration: none;
 }
