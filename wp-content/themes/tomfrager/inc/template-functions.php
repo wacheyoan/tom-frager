@@ -125,7 +125,6 @@ function logos() {
             'post_types' => array('page'),
 
         ));
-
     }
 
 }
